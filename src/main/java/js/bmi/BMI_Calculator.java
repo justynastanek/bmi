@@ -25,8 +25,16 @@ public class BMI_Calculator implements Calculator<Double> {
 
     public String interpret() {
 
-        int temp = Math.abs(Arrays.binarySearch(bmi_borders, this.calculate()));
-        return bmi_interpretations[temp-1];
+        int temp = Arrays.binarySearch(bmi_borders, this.calculate());
+
+        if(temp >= 0 ){
+
+            return bmi_interpretations[temp];
+
+        }else{
+
+        return bmi_interpretations[Math.abs(temp)-1];
+                }
     }
 
 }
