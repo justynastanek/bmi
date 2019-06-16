@@ -11,11 +11,18 @@ public class BMI_Calculator implements Calculator<Double> {
     }
 
     public Double calculate() {
-        return weight/(Math.pow(height,2));
+        return weight/(Math.pow(height/100,2));
     }
 
     public String interpret() {
-        return null;
+
+        if(this.calculate() < 18.5){
+            return "underweight";
+        }else if(this.calculate() >= 18.5 && this.calculate() <= 24.99){
+            return "normal";
+        }
+
+        return "overweight";
     }
 
 }
