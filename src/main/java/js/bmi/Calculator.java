@@ -1,4 +1,8 @@
 package js.bmi;
 
-public interface Calculator {
+public interface Calculator<T> {
+
+    T calculate();
+    String interpret();
+
 }
