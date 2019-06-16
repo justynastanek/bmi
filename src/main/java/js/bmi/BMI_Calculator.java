@@ -12,7 +12,7 @@ public class BMI_Calculator implements Calculator<Double> {
     "Severely obese", "Very severely obese", "Morbidly Obese", "Super Obese", "Hyper Obese"};
 
     private static final double[] bmi_borders = {15, 16, 18.5, 25, 30, 35, 40,
-    45, 50, 60, 1000};
+    45, 50, 60, Double.POSITIVE_INFINITY};
 
     public BMI_Calculator(double height, double weight) {
         this.height = height;
