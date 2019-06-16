@@ -35,7 +35,7 @@ public class Main {
                 sc.close();
 
                 BMI_Calculator bm1 = new BMI_Calculator(h, w);
-                System.out.println("Your BMI: " + bm1.calculate());
+                System.out.println("Your BMI: " + String.format("%.2f",bm1.calculate()));
                 System.out.println("Interpretation: " + bm1.interpret());
 
     }
